@@ -1,0 +1,171 @@
+body {
+    background-image: url(media/pokemonBackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#list {
+    background-color: yellow;
+    
+}
+
+#listTitle {
+    font-family: 'Architects Daughter', cursive;
+    font-style: oblique;
+    text-decoration: underline;
+    position: absolute;
+    top: -20px;
+    right: 100px;
+    z-index: 12;
+}
+
+li {
+    padding-top: 5px;
+    padding-left: 5px;
+    overflow: hidden;
+}
+#list li {
+    cursor: pointer;
+}
+#list li:hover {
+    line-height: 1.5em;
+    letter-spacing: 2px;
+    font-weight: bold ;
+}
+
+#description {
+    display: none;
+    position: absolute;
+    top:350px;
+    right: 400px;
+    z-index: 3;
+
+}
+
+#pokedex {
+    border: 4mm ridge rgba(201, 232, 233, 0.6);
+    position: absolute;
+    right: 240px;
+    top:60px;
+    width: 900px;
+    z-index: 0;
+}
+
+ #selfie {
+    position: absolute;
+    right: 260px;
+    top: -70px; 
+    max-width: 150px;
+    z-index: 10;
+    padding-right: 200px;
+} 
+
+h1 {
+    font-family: 'Luckiest Guy', cursive; 
+    position: absolute;
+    top: 120px;
+    right: 745px;
+    z-index: 12;
+}
+
+dt , dl {
+    float: right;
+}
+.close {
+    position: absolute;
+    top:-90px;
+    right: 380px
+}
+
+dd {
+    font-weight: bold;
+}
+dt {
+    font-family: "Architects Daughter", cursive;
+    font-weight: 900;
+}
+.name {
+    position: absolute;
+    right: 538px;
+    top: 298px;
+}
+
+#name {
+    position: absolute;
+    top:260px;
+    right:595px;
+}
+
+.height {
+    position: absolute;
+    top: 17px;
+    right: 140px;
+}    
+
+.types {
+    position: absolute;
+    top: 293px;
+    right:-25px;
+}
+#type {
+    position: absolute;
+    top: 270px;
+    right: 11px;
+}
+
+.container{
+    
+    position: absolute;
+    top:35px;
+    right: 20px;
+    height: 600px;
+    width:200px;
+    overflow: scroll;
+}
+
+#container{
+    border: 4mm ridge rgba(223, 72, 72, 0.6);
+    background-color: red;
+    position: absolute;
+    top:50px;
+    left:0px;
+    height: 680px;
+    width:240px;
+}
+.id {
+    position: absolute;
+    top:-250px;
+    right: 660px;
+}
+
+.weight {
+    position: absolute;
+    top:18px;
+    right:15px
+}
+
+#forms {
+    position: absolute;
+    top:270px;
+    right:158px;
+}
+
+.forms {
+    position: absolute;
+    top:293px;
+    right:112px;
+}
+
+#info {
+    float: none;
+    font-family: "Architects Daughter", cursive;
+    position: absolute;
+    top: -275px;
+    right:150px;
+}
+
+.info {
+    position: absolute;
+    top: -250px;
+    right: 50px;
+}

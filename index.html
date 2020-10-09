@@ -2,28 +2,42 @@
 <html lang="en">
     <head>
         <title>Pokédex</title>
-        <link rel="stylesheet" href="style.css" type="text/css"/>
+        <link rel="stylesheet" href="CSS/style.css" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Luckiest+Guy&display=swap" rel="stylesheet">
     </head>
     <body>
         <h1>Pokédex</h1>
         <main>
-            <ul id="list"></ul>
+            <div id="container">
+                <h1 id="listTitle">List</h1>
+                <div class="container">
+                    <ul id="list"></ul>
+                </div>
+            </div>
+            
+            
+            <img id="pokedex" src="CSS/media/pokedex.jpg" alt="">
             <div id="description">
                 <button class="close">❌</button>
+                <img id="selfie" src="" alt="">
                 <dl>
-                    <dt>Name</dt>
+                    <dt id="info">Special ability :</dt>
+                    <dd class="info"></dd>
+                    <dt id="name">name:</dt>
                     <dd class="name"></dd>
-                    <dt>ID</dt>
+                    <dt></dt>
                     <dd class="id"></dd>
-                    <dt>Poids</dt>
+                    <dt></dt>
                     <dd class="weight"></dd>
-                    <dt>Taille</dt>
+                    <dt></dt>
                     <dd class="height"></dd>
-                    <dt>Types</dt>
+                    <dt id="forms">form:</dt>
+                    <dd class="forms"></dd>
+                    <dt id="type">type:</dt>
                     <dd class="types"></dd>
                 </dl>
             </div>
         </main>
-        <script src="script.js"></script>
+        <script src="JS/script.js"></script>
     </body>
 </html>
