@@ -69,19 +69,28 @@ function showDescription (data) {
         // ...
         
     }); */
-    document.querySelector(".name").textContent = data.name;
+
+        document.querySelector("#blackScreen").style.display="none";
+        document.querySelector("#greenScreen").style.display="none";
+        document.querySelector(".name").textContent = data.name;
         document.querySelector(".id").textContent = "# " + data.id ;
         document.querySelector(".weight").textContent = data.weight;
         document.querySelector(".height").textContent = data.height;
         document.querySelector(".types").textContent = data.types[0].type.name;
         document.querySelector(".forms").textContent = data.forms[0].name;
         document.querySelector("#selfie").setAttribute("src", "https://pokeres.bastionbot.org/images/pokemon/" + data.id + ".png");
+        /* document.querySelector("#sound").setAttribute("src", "sound"); */
+        
+
         document.querySelector(".info").textContent = data.abilities[0].ability.name;
 // fonction array
     const btnClose = document.getElementsByClassName("close")[0];
     console.log(btnClose);
     btnClose.addEventListener("click", function(){ 
+        
         document.getElementById("description").style.display="none"; 
+        document.querySelector("#blackScreen").style.display="block";
+        document.querySelector("#greenScreen").style.display="block";
     }); 
 }
 

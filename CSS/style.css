@@ -14,8 +14,8 @@ body {
     font-style: oblique;
     text-decoration: underline;
     position: absolute;
-    top: -20px;
-    right: 100px;
+    top: -15px;
+    right: 120px;
     z-index: 12;
 }
 
@@ -28,6 +28,8 @@ li {
     cursor: pointer;
 }
 #list li:hover {
+    
+    transition-delay: 20ms;
     line-height: 1.5em;
     letter-spacing: 2px;
     font-weight: bold ;
@@ -59,6 +61,27 @@ li {
     z-index: 10;
     padding-right: 200px;
 } 
+
+#blackScreen {
+    position: absolute;
+    right: 575px;
+    top: 255px; 
+    height:213px ;
+    max-width: 316px;
+    z-index: 10;
+    padding-right: 200px;
+}
+
+#greenScreen{
+    position: absolute;
+    right: 326px;
+    top: 274px; 
+    height:131px ;
+    width: 286px;
+    z-index: 30;
+    
+    background-color: darkgreen;
+}
 
 h1 {
     font-family: 'Luckiest Guy', cursive; 
@@ -116,8 +139,8 @@ dt {
 .container{
     
     position: absolute;
-    top:35px;
-    right: 20px;
+    top:55px;
+    right: 40px;
     height: 600px;
     width:200px;
     overflow: scroll;
@@ -127,10 +150,10 @@ dt {
     border: 4mm ridge rgba(223, 72, 72, 0.6);
     background-color: red;
     position: absolute;
-    top:50px;
+    top:0px;
     left:0px;
-    height: 680px;
-    width:240px;
+    height: 730px;
+    width:280px;
 }
 .id {
     position: absolute;
