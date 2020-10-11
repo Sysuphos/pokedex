@@ -46,6 +46,7 @@ li {
 
 #pokedex {
     border: 4mm ridge rgba(201, 232, 233, 0.6);
+    border-radius: 15px;
     position: absolute;
     right: 240px;
     top:60px;
@@ -83,6 +84,61 @@ li {
     background-color: darkgreen;
 }
 
+#logo {
+    position: absolute;
+    top: 14px;
+    left:256px;
+    width: 40px;
+    z-index: 30;
+  
+}
+#logo2 {
+    position: absolute;
+    top: 703px;
+    left:256px;
+    width: 40px;
+    z-index: 3;
+  
+}
+#logo3 {
+    position: absolute;
+    top: 703px;
+    left:14px;
+    width: 40px;
+    z-index: 3;
+  
+}
+#logo4 {
+    position: absolute;
+    top: 14px;
+    left:14px;
+    width: 40px;
+    z-index: 3;
+  
+}
+#pika {
+    position: absolute;
+    top: 692px;
+    left: 115px;
+    z-index: 3;
+    width: 80px;
+}
+#meowth {
+    position: absolute;
+    top: 14px;
+    left: 194px;
+    z-index: 3;
+    width: 50px;
+}
+
+#eevee {
+    position: absolute;
+    top: 153px;
+    right: 287px;
+    z-index: 40;
+    width: 75px;
+}
+
 h1 {
     font-family: 'Luckiest Guy', cursive; 
     position: absolute;
@@ -115,7 +171,7 @@ dt {
 
 #name {
     position: absolute;
-    top:260px;
+    top:264px;
     right:595px;
 }
 
@@ -125,20 +181,25 @@ dt {
     right: 140px;
 }    
 
-.types {
-    position: absolute;
-    top: 293px;
-    right:-25px;
-}
 #type {
     position: absolute;
-    top: 270px;
-    right: 11px;
+    top: 255px;
+    right: -105px;
+    width: 110px;
+}
+
+#types {
+    position: absolute;
+    top: 272px;
+    right: 15px;
 }
 
 .container{
     
     position: absolute;
+    border: 7px solid yellow;
+    
+    border-radius: 0px;
     top:55px;
     right: 40px;
     height: 600px;
@@ -148,6 +209,7 @@ dt {
 
 #container{
     border: 4mm ridge rgba(223, 72, 72, 0.6);
+    border-radius: 15px;
     background-color: red;
     position: absolute;
     top:0px;
@@ -169,7 +231,7 @@ dt {
 
 #forms {
     position: absolute;
-    top:270px;
+    top:272px;
     right:158px;
 }
 
@@ -179,16 +241,35 @@ dt {
     right:112px;
 }
 
-#info {
+#abilities {
     float: none;
     font-family: "Architects Daughter", cursive;
+    text-decoration: underline;
     position: absolute;
     top: -275px;
-    right:150px;
+    right:190px;
+    color:  rgb(255, 0, 0);
 }
 
-.info {
+#infos {
     position: absolute;
-    top: -250px;
-    right: 50px;
+    top: -279px;
+    right: -132px;
+    width: 110px;
+    color: rgb(255, 0, 0);
+    border: 13px solid rgb(214, 211, 211);
+    background-color: yellow;
+    border-radius: 15px ; 
+    padding-right: 70px;   
+    padding-left: 0px;
+    padding-bottom: 2px;
+}
+
+#play {
+    z-index: 36;
+    width: 30px;
+    position: absolute;
+    top: 133px;
+    right: 617px;
+    cursor: pointer;
 }

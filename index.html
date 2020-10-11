@@ -6,6 +6,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Luckiest+Guy&display=swap" rel="stylesheet">
     </head>
     <body>
+
+        <audio src="JS/sound/pokemonSound.mp3"></audio>
         <h1>Pokédex</h1>
         <main>
             <div id="container">
@@ -14,17 +16,27 @@
                     <ul id="list"></ul>
                 </div>
             </div>
-            
+        
             <img id="blackScreen" src="https://ak.picdn.net/shutterstock/videos/727387/thumb/1.jpg?ip=x480" alt="">
+            <img id="logo" src="CSS/media/logo.png" alt="">
+            <img id="logo2" src="CSS/media/logo.png" alt="">
+            <img id="logo3" src="CSS/media/logo.png" alt="">
+            <img id="logo4" src="CSS/media/logo.png" alt="">
+            <img id="pika" src="CSS/media/pika.png" alt="">
+            <img id="meowth" src="CSS/media/mew.png" alt="">
+            <img id="eevee" src="CSS/media/eevee.png" alt="">
+            
+            
             <div id="greenScreen"></div>
             <img id="pokedex" src="CSS/media/pokedex.jpg" alt="">
             <div id="description">
                 <button class="close">❌</button>
+                <img id="play" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHdpZHRoPSI1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGc+PGc+PGNpcmNsZSBjeD0iMjU2IiBjeT0iMjU2IiBmaWxsPSIjZDgwMDI3IiByPSIyNDAiLz48cGF0aCBkPSJtMjA4LjUzOCAzNDR2LTE3NmwxNDUuOTI0IDg4eiIgZmlsbD0iI2UwZTBlMiIvPjwvZz48Zz48Zz48cGF0aCBkPSJtNDMxLjM2IDgwLjY0YTI0OCAyNDggMCAxIDAgLTM1MC43MiAzNTAuNzIgMjQ4IDI0OCAwIDEgMCAzNTAuNzItMzUwLjcyem0tMTEuMzEgMzM5LjQxYTIzMiAyMzIgMCAwIDEgLTMyOC4xLTMyOC4xIDIzMiAyMzIgMCAwIDEgMzI4LjEgMzI4LjF6Ii8+PHBhdGggZD0ibTE3NiA0NjQuN2E3Ljk4MiA3Ljk4MiAwIDAgMSAtMi45NjMtLjU3MSAyMjQuMDc3IDIyNC4wNzcgMCAwIDEgLTE0MS4wMzctMjA4LjEyOSA4IDggMCAwIDEgMTYgMCAyMDguMDczIDIwOC4wNzMgMCAwIDAgMTMwLjk2NSAxOTMuMjcxIDggOCAwIDAgMSAtMi45NjUgMTUuNDI5eiIvPjxwYXRoIGQ9Im0yMTYuMDA5IDQ3Ni4zMDVhOC4wNzIgOC4wNzIgMCAwIDEgLTEuNDgyLS4xMzhjLTUuNTU3LTEuMDQxLTExLjE0MS0yLjMwOS0xNi41OTUtMy43N2E4IDggMCAxIDEgNC4xMzYtMTUuNDU1YzUuMDYzIDEuMzU1IDEwLjI0NSAyLjUzMyAxNS40MDUgMy41YTggOCAwIDAgMSAtMS40NjQgMTUuODY1eiIvPjwvZz48cGF0aCBkPSJtMjA4LjUzOCAzNTJhOCA4IDAgMCAxIC04LTh2LTE3NmE4IDggMCAwIDEgMTIuMTMxLTYuODUxbDE0NS45MjQgODhhOCA4IDAgMCAxIDAgMTMuN2wtMTQ1LjkyNCA4OGE4IDggMCAwIDEgLTQuMTMxIDEuMTUxem04LTE2OS44MzN2MTQ3LjY2NmwxMjIuNDMzLTczLjgzM3oiLz48L2c+PC9nPjwvc3ZnPg==" />
                 <img id="selfie" src="" alt="">
 
                 <dl>
-                    <dt id="info">Special ability :</dt>
-                    <dd class="info"></dd>
+                    <dt id="abilities">Special abilities :</dt>
+                    <dd ><ul id="infos"></ul></dd>
                     <dt id="name">name:</dt>
                     <dd class="name"></dd>
                     <dt></dt>
@@ -35,8 +47,8 @@
                     <dd class="height"></dd>
                     <dt id="forms">form:</dt>
                     <dd class="forms"></dd>
-                    <dt id="type">type:</dt>
-                    <dd class="types"></dd>
+                    <dt id="types">type:</dt>
+                    <dd ><ul id="type"></ul></dd>
                 </dl>
             </div>
         </main>

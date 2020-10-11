@@ -1,5 +1,7 @@
 const list = document.getElementById("list");
+const infos = document.getElementById("infos");
 const description = document.getElementById("description");
+const types = document.querySelector("#type");
 
 const api = "https://pokeapi.co/api/v2/pokemon?limit=150";
 
@@ -17,10 +19,12 @@ function transformToJson (response) {
 /**
  * Clear the list of all its items
  */
-function emptyList () {
+function emptyList (list) {
     // ...
-    document.getElementById("list").innerHTML = "";
+    list.innerHTML = "";
 }
+
+
 
 /**
  * Create an item, fetch its data and setup event listener
@@ -52,7 +56,7 @@ function createItem (pokemon) {
  * fill the item list with values
  */
 function fillList (json) {
-    emptyList();
+    emptyList(list);
     json.results.forEach(createItem);
     console.log(json);
 }
@@ -76,21 +80,24 @@ function showDescription (data) {
         document.querySelector(".id").textContent = "# " + data.id ;
         document.querySelector(".weight").textContent = data.weight;
         document.querySelector(".height").textContent = data.height;
-        document.querySelector(".types").textContent = data.types[0].type.name;
+        createAbilities(data.abilities);
+        createTypes (data.types);
         document.querySelector(".forms").textContent = data.forms[0].name;
         document.querySelector("#selfie").setAttribute("src", "https://pokeres.bastionbot.org/images/pokemon/" + data.id + ".png");
-        /* document.querySelector("#sound").setAttribute("src", "sound"); */
         
+        const btnClose = document.getElementsByClassName("close")[0];
+        console.log(btnClose);
+        document.querySelector("#play").addEventListener("click", function(){
+            document.querySelector("audio").play();
+        });
 
-        document.querySelector(".info").textContent = data.abilities[0].ability.name;
-// fonction array
-    const btnClose = document.getElementsByClassName("close")[0];
-    console.log(btnClose);
-    btnClose.addEventListener("click", function(){ 
+        btnClose.addEventListener("click", function(){ 
         
         document.getElementById("description").style.display="none"; 
         document.querySelector("#blackScreen").style.display="block";
         document.querySelector("#greenScreen").style.display="block";
+        document.querySelector("audio").pause();
+        document.querySelector("audio").currentTime = 0;
     }); 
 }
 
@@ -101,5 +108,36 @@ function hideDescription () {
     description.classList.remove("show");
 }
 
+
+function createAbilities (array) {
+    emptyList (infos);
+    array.forEach(function(element){
+        let item = document.createElement("li");
+        item.setAttribute("classe", "infos");
+        item.textContent = ". " + element.ability.name;
+        infos.appendChild(item);
+    });
+
+    
+}
+
+function playSound () {
+    document.querySelector("#play").addEventListener("click", function(){
+        document.querySelector("audio").setAttribute("src", "JS/sound/First-150/1 (" + data.id + ").wav");
+        document.querySelector("audio").play();
+    });
+}
+
+function createTypes (array) {
+    emptyList(types);
+    array.forEach(function (element){
+        let item = document.createElement("li");
+        item.setAttribute("class", "type");
+        item.textContent= ". " + element.type.name;
+        types.appendChild(item);
+    });
+}
+
 // Fetch the API end-point and fill the list
 fetch(api).then(transformToJson).then(fillList);
+
