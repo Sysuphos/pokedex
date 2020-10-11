@@ -1,11 +1,11 @@
 body {
-    background-image: url(media/pokemonBackground.jpg);
+    background-image: url(media/pokemonBackground3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #list {
-    background-color: yellow;
+    background-color: rgb(48, 250, 4);
     
 }
 
@@ -197,9 +197,9 @@ dt {
 .container{
     
     position: absolute;
-    border: 7px solid yellow;
-    
-    border-radius: 0px;
+    border: 7px solid rgb(176, 176, 176);
+    box-shadow: 7px 5px rgb(103, 100, 102);
+    border-radius: 15px;
     top:55px;
     right: 40px;
     height: 600px;
@@ -210,7 +210,7 @@ dt {
 #container{
     border: 4mm ridge rgba(223, 72, 72, 0.6);
     border-radius: 15px;
-    background-color: red;
+    background-color: rgb(251, 6, 5);
     position: absolute;
     top:0px;
     left:0px;
@@ -257,8 +257,9 @@ dt {
     right: -132px;
     width: 110px;
     color: rgb(255, 0, 0);
-    border: 13px solid rgb(214, 211, 211);
-    background-color: yellow;
+    border: 11px solid rgb(176, 176, 176);
+    box-shadow: -3px 5px rgb(103, 100, 102);
+    background-color: rgb(251, 251, 5);
     border-radius: 15px ; 
     padding-right: 70px;   
     padding-left: 0px;
