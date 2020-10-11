@@ -76,6 +76,8 @@ function showDescription (data) {
 
         document.querySelector("#blackScreen").style.display="none";
         document.querySelector("#greenScreen").style.display="none";
+        document.querySelector("#battleScreen").style.display="block";
+
         document.querySelector(".name").textContent = data.name;
         document.querySelector(".id").textContent = "# " + data.id ;
         document.querySelector(".weight").textContent = data.weight;
@@ -93,6 +95,7 @@ function showDescription (data) {
 
         btnClose.addEventListener("click", function(){ 
         
+        document.querySelector("#battleScreen").style.display="none";
         document.getElementById("description").style.display="none"; 
         document.querySelector("#blackScreen").style.display="block";
         document.querySelector("#greenScreen").style.display="block";

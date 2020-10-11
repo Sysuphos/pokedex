@@ -40,7 +40,7 @@ li {
     position: absolute;
     top:350px;
     right: 400px;
-    z-index: 3;
+    z-index: 11;
 
 }
 
@@ -56,9 +56,9 @@ li {
 
  #selfie {
     position: absolute;
-    right: 260px;
-    top: -70px; 
-    max-width: 150px;
+    right: 280px;
+    top: -65px; 
+    width: 170px;
     z-index: 10;
     padding-right: 200px;
 } 
@@ -68,7 +68,18 @@ li {
     right: 575px;
     top: 255px; 
     height:213px ;
-    max-width: 316px;
+    width: 316px;
+    z-index: 10;
+    padding-right: 200px;
+}
+
+#battleScreen {
+    display: none;
+    position: absolute;
+    right: 575px;
+    top: 255px; 
+    height:213px ;
+    width: 316px;
     z-index: 10;
     padding-right: 200px;
 }
@@ -153,7 +164,8 @@ dt , dl {
 .close {
     position: absolute;
     top:-90px;
-    right: 380px
+    right: 380px;
+    z-index: 15;
 }
 
 dd {
