@@ -2,7 +2,6 @@ const list = document.getElementById("list");
 const infos = document.getElementById("infos");
 const description = document.getElementById("description");
 const types = document.querySelector("#type");
-
 const api = "https://pokeapi.co/api/v2/pokemon?limit=150";
 
 /**
@@ -47,8 +46,7 @@ function createItem (pokemon) {
         document.getElementById("description").style.display="block"; 
         showDescription(data);
     }); 
-      console.log(data);
-       
+ 
     });
 }
 
@@ -58,42 +56,39 @@ function createItem (pokemon) {
 function fillList (json) {
     emptyList(list);
     json.results.forEach(createItem);
-    console.log(json);
+  
 }
 
 /**
  * Fill and display the description
  */
 function showDescription (data) {
-    console.log(data);
+   
+    
     description.classList.add("show");
-
-   /*  const fields = description.querySelectorAll("dd");
+    
+     const fields = description.querySelectorAll("dd");
     fields.forEach((dd) => {
-        // ...
-        
-    }); */
-
+        if(dd.classList[0] != undefined){
+        console.log(dd.classList[0]);
+         dd.textContent = data[dd.classList[0]];
+        }
+    });
+         
         document.querySelector("#blackScreen").style.display="none";
         document.querySelector("#greenScreen").style.display="none";
         document.querySelector("#battleScreen").style.display="block";
-
-        document.querySelector(".name").textContent = data.name;
-        document.querySelector(".id").textContent = "# " + data.id ;
-        document.querySelector(".weight").textContent = data.weight;
-        document.querySelector(".height").textContent = data.height;
+        document.querySelector(".forms").textContent = data.forms[0].name;
         createAbilities(data.abilities);
         createTypes (data.types);
-        document.querySelector(".forms").textContent = data.forms[0].name;
         document.querySelector("#selfie").setAttribute("src", "https://pokeres.bastionbot.org/images/pokemon/" + data.id + ".png");
-        
         const btnClose = document.getElementsByClassName("close")[0];
-        console.log(btnClose);
         document.querySelector("#play").addEventListener("click", function(){
             document.querySelector("audio").play();
         });
 
-        btnClose.addEventListener("click", function(){ 
+
+    btnClose.addEventListener("click", function(){ 
         
         document.querySelector("#battleScreen").style.display="none";
         document.getElementById("description").style.display="none"; 
@@ -124,13 +119,6 @@ function createAbilities (array) {
     
 }
 
-function playSound () {
-    document.querySelector("#play").addEventListener("click", function(){
-        document.querySelector("audio").setAttribute("src", "JS/sound/First-150/1 (" + data.id + ").wav");
-        document.querySelector("audio").play();
-    });
-}
-
 function createTypes (array) {
     emptyList(types);
     array.forEach(function (element){
@@ -140,6 +128,15 @@ function createTypes (array) {
         types.appendChild(item);
     });
 }
+
+function playSound () {
+    document.querySelector("#play").addEventListener("click", function(){
+        document.querySelector("audio").setAttribute("src", "JS/sound/First-150/1 (" + data.id + ").wav");
+        document.querySelector("audio").play();
+    });
+}
+
+
 
 // Fetch the API end-point and fill the list
 fetch(api).then(transformToJson).then(fillList);

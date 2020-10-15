@@ -29,7 +29,7 @@ li {
 }
 #list li:hover {
     
-    transition-delay: 20ms;
+    transition: all 200ms ease;
     line-height: 1.5em;
     letter-spacing: 2px;
     font-weight: bold ;
@@ -234,8 +234,9 @@ dt {
 }
 .id {
     position: absolute;
-    top:-250px;
-    right: 660px;
+    top:-235px;
+    right: 655px;
+    font-size: 30px;
 }
 
 .weight {
@@ -252,7 +253,7 @@ dt {
 
 .forms {
     position: absolute;
-    top:293px;
+    top:280px;
     right:112px;
 }
 
