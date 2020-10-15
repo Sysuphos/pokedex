@@ -3,6 +3,7 @@ const infos = document.getElementById("infos");
 const description = document.getElementById("description");
 const types = document.querySelector("#type");
 const api = "https://pokeapi.co/api/v2/pokemon?limit=150";
+const btnClose = document.getElementsByClassName("close")[0];
 
 /**
  * Try to parse a response as JSON data
@@ -67,6 +68,10 @@ function showDescription (data) {
     
     description.classList.add("show");
     
+
+    document.querySelector("#blackScreen").style.display="none";
+    document.querySelector("#greenScreen").style.display="none";
+    document.querySelector("#battleScreen").style.display="block";
      const fields = description.querySelectorAll("dd");
     fields.forEach((dd) => {
         if(dd.classList[0] != undefined){
@@ -75,14 +80,14 @@ function showDescription (data) {
         }
     });
          
-        document.querySelector("#blackScreen").style.display="none";
-        document.querySelector("#greenScreen").style.display="none";
-        document.querySelector("#battleScreen").style.display="block";
+        
         document.querySelector(".forms").textContent = data.forms[0].name;
         createAbilities(data.abilities);
         createTypes (data.types);
         document.querySelector("#selfie").setAttribute("src", "https://pokeres.bastionbot.org/images/pokemon/" + data.id + ".png");
-        const btnClose = document.getElementsByClassName("close")[0];
+        
+        
+    
         document.querySelector("#play").addEventListener("click", function(){
             document.querySelector("audio").play();
         });
